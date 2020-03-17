@@ -21,6 +21,7 @@ We use the SDO ML dataset from Galvez et al (2019). This must be downloaded, and
 
 There would be certain times without the existence of `00:00` data. In such cases, if there might be a need to manually delete the remaining files, and keep the first one alone.
 
+NOTE: Each month gives ~6 to 7 GB of data - thus, make sure there is good internet connectivity and memory for storage. To remedy this, we provide the dataset folds (thus you will need to make the 5 folds yourself). This amounts to ~0.3 GB per fold. 
 #### Data processing
 With the data arranged in the prescribed format, the next step is data processing, which is performed in `DataProcessing/` folder. The AIA preparation and OMNI preparation are outlined in the corresponding folder.
 
@@ -30,6 +31,8 @@ If the cross validation dataset generation is done correctly, the Benchmark mode
 #### WindNet modelling
 Similar to Benchmark modelling, this is trivial to perform if dataset generation is done correctly. There are Jupyter notebooks available for visualization too. 
 We have provided the trained models in `Models/` folder, but the dataset will need to be downloaded for visualization. To download all the model files and the GoogleNet weights (to be present in KaffeModelConverted/), please navigate here: https://drive.google.com/drive/folders/18Z9-IcjtUOdaYWOQvPnB8YCKZ4kTj581?usp=sharing. 
+
+NOTE: The set of models for all combinations comes to ~ 100 GB. Thus, as a first step, we advise you to download the best models for 193 $\AA$ and 211 $\AA$ 4 day history and 3 day delay to obtain at least the prediction plots. 
 
 #### Visualization and plotting
 1. Each WindNet model may be visualized through `WindNet_easy_crossValid.ipynb` - this also generates the prediction plots of our paper.
