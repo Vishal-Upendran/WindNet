@@ -29,7 +29,7 @@ If the cross validation dataset generation is done correctly, the Benchmark mode
 
 #### WindNet modelling
 Similar to Benchmark modelling, this is trivial to perform if dataset generation is done correctly. There are Jupyter notebooks available for visualization too. 
-We have provided the trained models in `Models/` folder, but the dataset will need to be downloaded for visualization.
+We have provided the trained models in `Models/` folder, but the dataset will need to be downloaded for visualization. To download all the model files and the GoogleNet weights (to be present in KaffeModelConverted/), please navigate here: https://drive.google.com/drive/folders/18Z9-IcjtUOdaYWOQvPnB8YCKZ4kTj581?usp=sharing. 
 
 #### Visualization and plotting
 1. Each WindNet model may be visualized through `WindNet_easy_crossValid.ipynb` - this also generates the prediction plots of our paper.
