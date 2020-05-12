@@ -9,10 +9,11 @@ history = int(sys.argv[1])
 delay = int(sys.argv[2])
 ch_filter = int(sys.argv[3])
 cross_valid=int(sys.argv[4])
+base=sys.argv[5]
 a=[]
 #The base path should be entered as such. Update your base path.
 #bp='../Models/WindNet/FP32_'+str(ch_filter)+'/SDOPred'+str(history)+str(delay)+'/'
-bp='Models/WindNet/CrossValidation/'+str(ch_filter)+'/CV_'+str(cross_valid)+'/SDOPred'+str(history)+str(delay)+'/'
+bp=base+'Models/WindNet/CrossValidation/'+str(ch_filter)+'/CV_'+str(cross_valid)+'/SDOPred'+str(history)+str(delay)+'/'
 #Use below for 3channel image
 if ch_filter==94193211:
     bp='Models/WindNet/CrossValidation/'+str(ch_filter)+'/CV_'+str(cross_valid)+'/SDOPred'+str(history)+str(delay)+'/'

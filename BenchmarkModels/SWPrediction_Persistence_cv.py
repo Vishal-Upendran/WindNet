@@ -54,8 +54,8 @@ _,ytest,ytest_stddev = BifurcatedDataloader(testpaths,param,param_stddev,[256,25
 yval = ytest
 #-------------------------------------------->
 print ytest.shape
-ymax =np.max(ytrain)-np.min(ytrain)
-ymin =np.min(ytrain)
+ymax =1.0 #np.max(ytrain)-np.min(ytrain)
+ymin =0.0 #np.min(ytrain)
 
 ytrain = NormalizeImage(ytrain,ymin,ymax)
 ytest = NormalizeImage(ytest,ymin,ymax)
@@ -71,7 +71,7 @@ xo=[]
 yo=[]
 yo2 =[]
 for i in xrange(ytest.shape[0]):
-	for j in xrange(ytest.shape[1]-delay-history):
+	for j in xrange(ytest.shape[1]-delay-history+1):
 		xo.append(ytest[i,j,:])
 		yo.append(ytest[i,j+history+delay-1,:])
 		yo2.append(ytest_stddev[i,j+history+delay-1,:])
@@ -83,7 +83,7 @@ xo=[]
 yo=[]
 yo2=[]
 for i in xrange(ytrain.shape[0]):
-	for k in xrange(ytrain.shape[1]-delay-history):
+	for k in xrange(ytrain.shape[1]-delay-history+1):
 		xo.append(ytrain[i,k,:])
 		yo.append(ytrain[i,k+history+delay-1,:])
 		yo2.append(ytrain_stddev[i,k+history+delay-1,:])

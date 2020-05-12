@@ -26,6 +26,7 @@ parser.add_argument('n_iter', type = int, help = 'Iteration number for the model
 parser.add_argument('basePath', default = 'None',help = 'Custom path for the trained model weights')
 parser.add_argument('ch_filter',default = 'None',help = 'Filter number associated with the model')
 parser.add_argument('cross_valid',type = int, default = 'None',help = 'Cross validation index')
+parser.add_argument('dpath',default = 'None',help = 'Data path')
 args = parser.parse_args()
 '''
     The parameters have all been explained in Technicalities.md
@@ -48,6 +49,7 @@ delay = args.delay#int(sys.argv[1])
 n_iter2 = args.n_iter#int(sys.argv[3])
 ch_filter=args.ch_filter
 cross_valid = args.cross_valid
+dpath=args.dpath
 print ch_filter
 Direc='/tmp/tenorflow/run9'
 nc = 832
@@ -91,9 +93,9 @@ nc = 832
 #validationpaths = sorted(glob('../Data/Bifurcated_data_'+str(ch_filter)+'/Test/*.npy'))
 
 #If the data is new, mask has not been done. Mask file must be run.
-trainpaths = sorted(glob('../Data/CrossValidation'+str(ch_filter)+'/CV_%d/Train/*.npy'%cross_valid))
-testpaths = sorted(glob('../Data/CrossValidation'+str(ch_filter)+'/CV_%d/Test/*.npy'%cross_valid))
-validationpaths = sorted(glob('../Data/CrossValidation'+str(ch_filter)+'/CV_%d/Test/*.npy'%cross_valid))
+trainpaths = sorted(glob(dpath+'Data/CrossValidation'+str(ch_filter)+'/CV_%d/Train/*.npy'%cross_valid))
+testpaths = sorted(glob(dpath+'Data/CrossValidation'+str(ch_filter)+'/CV_%d/Test/*.npy'%cross_valid))
+validationpaths = sorted(glob(dpath+'Data/CrossValidation'+str(ch_filter)+'/CV_%d/Test/*.npy'%cross_valid))
 #--------------------
 #Mask path
 #trainpaths_Mask = sorted(glob('../Data/Mask/CrossValidation'+str(ch_filter)+'/CV_'+str(cross_valid)+'/Train/*.npy'))
