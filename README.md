@@ -1,8 +1,8 @@
 ### Solar wind prediction using deep learning
 
-This repository contains codes for the work `Solar wind prediction using deep learning`. If you are using this code (in part or in entirety), or the results and conclusions from this study, do cite us as:
+This repository contains codes for the work [`Solar wind prediction using deep learning`](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2020SW002478). If you are using this code (in part or in entirety), or the results and conclusions from this study, do cite us as:
 
-<font color = '#559678'> Upendran et al ... </font>
+<font color = '#559678'>  Upendran, V., Cheung, M. C. M., Hanasoge, S., & Krishnamurthi, G. ( 2020). Solar wind prediction using deep learning. Space Weather, 18, e2020SW002478. https://doi.org/10.1029/2020SW002478 </font>
 
 The repository is divided into multiple parts as follows:
 
@@ -21,7 +21,7 @@ We use the SDO ML dataset from Galvez et al (2019). This must be downloaded, and
 
 There would be certain times without the existence of `00:00` data. In such cases, if there might be a need to manually delete the remaining files, and keep the first one alone.
 
-NOTE: Each month gives ~6 to 7 GB of data - thus, make sure there is good internet connectivity and memory for storage. To remedy this, we provide the dataset folds (thus you will need to make the 5 folds yourself). This amounts to ~0.3 GB per fold. 
+NOTE: Each month gives ~6 to 7 GB of data - thus, make sure there is good internet connectivity and memory for storage. To remedy this, we provide the dataset folds in the google drive link below (thus you will need to make the cross validation and mask generation yourself). This amounts to ~0.3 GB per fold. 
 #### Data processing
 With the data arranged in the prescribed format, the next step is data processing, which is performed in `DataProcessing/` folder. The AIA preparation and OMNI preparation are outlined in the corresponding folder.
 
