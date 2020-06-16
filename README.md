@@ -2,7 +2,7 @@
 
 This repository contains codes for the work [`Solar wind prediction using deep learning`](https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2020SW002478). If you are using this code (in part or in entirety), or the results and conclusions from this study, do cite us as:
 
-<font color = '#559678'>  Upendran, V., Cheung, M. C. M., Hanasoge, S., & Krishnamurthi, G. ( 2020). Solar wind prediction using deep learning. Space Weather, 18, e2020SW002478. https://doi.org/10.1029/2020SW002478 </font>
+```Upendran, V., Cheung, M. C. M., Hanasoge, S., & Krishnamurthi, G. ( 2020). Solar wind prediction using deep learning. Space Weather, 18, e2020SW002478. https://doi.org/10.1029/2020SW002478```
 
 The repository is divided into multiple parts as follows:
 
